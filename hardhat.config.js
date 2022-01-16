@@ -1,6 +1,5 @@
 require("@nomiclabs/hardhat-waffle");
-const dotenv = require('dotenv');
-dotenv.config();
+require('dotenv').config()
 
 // task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
 //   const accounts = await hre.ethers.getSigners();

@@ -17,7 +17,7 @@ module.exports = {
       chainId: 1337
     },
     mumbai: {
-      url: `https://polygon-mumbai.infura.io/v3/${process.env.projectIdTestNet}`,
+      url: `https://polygon-mumbai.infura.io/v3/5459db9fd30c41159ea3f18f548f62fe`,
       accounts: [process.env.privateKey]
     },
     mainnet: {

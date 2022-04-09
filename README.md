@@ -14,4 +14,7 @@ node scripts/sample-script.js
 npx hardhat help
 ```
 
+nftMarket deployed to: 0x7EE0E6Dca1E667b0284E6c059D679aE25B19acF0
+nft deployed to: 0x9189e470E7c5c174df5008635e738e4BA6151405
+
  npm run dev

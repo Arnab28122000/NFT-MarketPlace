@@ -4,6 +4,7 @@ import { create as ipfsHttpClient , CID, IPFSHTTPClient } from "ipfs-http-client
 import { useRouter } from 'next/router'
 import Web3Modal from 'web3modal'
 import btoa from 'btoa';
+import Image from 'next/image'
 
 
 
@@ -130,7 +131,7 @@ export default function CreateItem() {
         />
         {
           fileUrl && (
-            <img className="rounded mt-4 bg-blue-200" width="350" src={fileUrl} />
+            <Image className="rounded mt-4 bg-blue-200" width="350" src={fileUrl} />
           )
         }
         <button onClick={createSale} className="w-full bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 text-white font-bold py-4 px-12 rounded">

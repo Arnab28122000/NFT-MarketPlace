@@ -2,7 +2,7 @@ import { ethers } from 'ethers'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import Web3Modal from "web3modal"
-import Image from 'next/image'
+import LoadingSpinner from './loading-spinner'
 
 import {
   nftmarketaddress, nftaddress
@@ -67,6 +67,9 @@ export default function CreatorDashboard() {
       console.log("dashboard error:",e)
     }
     
+  }
+  if(loadingState === 'not-loaded'){
+    return (<LoadingSpinner/>)
   }
 
   if (loadingState === 'loaded' && !nfts.length) return (<h1 className="py-10 px-20 text-3xl">No assets created</h1>)

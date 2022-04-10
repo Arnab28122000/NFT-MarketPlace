@@ -2,6 +2,7 @@ import { ethers } from 'ethers'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import Web3Modal from "web3modal"
+import LoadingSpinner from './loading-spinner'
 
 
 import {
@@ -71,6 +72,9 @@ export default function Home() {
     })
     await transaction.wait()
     loadNFTs()
+  }
+  if(loadingState === 'not-loaded'){
+    return (<LoadingSpinner/>)
   }
   if (loadingState === 'loaded' && !nfts.length) return (<h1 className="px-20 py-10 text-3xl">No items in marketplace</h1>)
   return (
